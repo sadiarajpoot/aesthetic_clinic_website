@@ -32,7 +32,7 @@ A modern, fully responsive website for an aesthetic clinic offering advanced ski
 1. Clone the repository:
 
    ```bash
-          https://github.com/sadiarajpoot/aesthetic_clinic_website
+         https://github.com/sadiarajpoot/aesthetic_clinic_website
 
           
 

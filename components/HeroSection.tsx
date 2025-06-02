@@ -62,7 +62,7 @@ const HeroSection = () => {
       </Dialog>
 
       {/* Hero Section */}
-      <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-purple-100 flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-12 mt-[50px]">
+      <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-purple-100 flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-12 mt-[70px]">
         {/* Text Content */}
         <div className="text-center md:text-left max-w-xl ">
           <motion.h1
@@ -115,7 +115,7 @@ const HeroSection = () => {
             transition={{ delay: 0.9 }}
             className="mt-6"
           >
-            <p className="font-semibold text-gray-800 fonts">Dr. Raheel Memon</p>
+            <p className="font-bold text-gray-800 fonts text-2xl">Dr. Raheel Memon</p>
             <p className="text-gray-600 fonts">Certified Aesthetic Specialist</p>
           </motion.div>
         </div>

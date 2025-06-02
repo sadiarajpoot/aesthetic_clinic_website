@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="fonts">
           <div className="flex items-center mb-4 fonts">
             <Image src={Logo} alt="Clinic Logo" width={80} height={80} className="mr-2" />
-            <h1 className="text-xl font-bold text-rose-600">Glow Aesthetics</h1>
+            <h1  className="norican-regular text-rose-600 norican-regular font-bold text-xl" >Glow Aesthetics</h1>
           </div>
           <p className="text-sm text-gray-600">
             Enhancing your natural beauty with the latest aesthetic technologies. Trusted care. Lasting results.

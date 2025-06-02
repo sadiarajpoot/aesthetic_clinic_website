@@ -138,7 +138,7 @@ export default function ContactPage() {
         </div>
 
         {/* Info Section */}
-        <div className="space-y-6 text-gray-700">
+        <div className="space-y-6 text-gray-700 ">
           <h2 className="norican-regular text-rose-600 norican-regular font-bold text-3xl">Clinic Info</h2>
           <p className="flex items-center gap-2">
             <FaMapMarkerAlt className="text-lg" /> Gulshan, Karachi, Pakistan
@@ -166,7 +166,9 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+      <div className="mt-[20px]">
       <Footer/>
+      </div>
     </div>
     
   );

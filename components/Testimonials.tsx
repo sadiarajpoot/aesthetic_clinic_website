@@ -3,30 +3,33 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FaQuoteLeft, FaStar } from "react-icons/fa";
+import p1 from "../public/p1.avif"
+import p2 from "../public/p2.jpg"
+import p3 from "../public/p3.avif"
 
 const testimonials = [
   {
     id: 1,
-    name: "Emma Watson",
+    name: "Bilal Khan ",
     role: "Actress",
     content: "Dr. Johnsons subtle enhancements made me look refreshed without changing my features. Absolutely natural results!",
-    image: "/client1.jpg",
+    image: p1,
     rating: 5
   },
   {
     id: 2,
-    name: "Michael Brown",
+    name: "Amir Ali ",
     role: "CEO, TechCorp",
     content: "The thread lift treatment took 10 years off my appearance. My colleagues keep asking why I look so rested.",
-    image: "/client2.jpg",
+    image: p2,
     rating: 5
   },
   {
     id: 3,
-    name: "Sophia Chen",
+    name: "Ayesha Khan",
     role: "Fashion Designer",
     content: "Finally found an aesthetic doctor who understands Asian facial anatomy. The results are perfectly balanced.",
-    image: "/client3.jpg",
+    image: p3,
     rating: 5
   }
 ];
