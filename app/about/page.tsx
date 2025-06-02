@@ -1,5 +1,6 @@
 "use client";
 
+import WhatsAppFloat from "@/components/Floating_icon";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
@@ -124,7 +125,7 @@ export default function About() {
               <span className="text-4xl font-extrabold text-pink-500 fonts">15+</span>
               <p className="mt-2 fonts">Workshops & Community Events</p>
             </div>
-           
+           <WhatsAppFloat/>
           </div>
         </motion.section>
       </main>

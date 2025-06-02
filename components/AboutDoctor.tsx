@@ -5,6 +5,7 @@ import about from "../public/about.webp"
 import { useState } from 'react';
 import { FaAward, FaClinicMedical, FaUserGraduate } from 'react-icons/fa';
 
+
 const AboutDoctor = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [activeTab, setActiveTab] = useState('about');
@@ -226,6 +227,7 @@ const AboutDoctor = () => {
           </motion.div>
         </div>
       </div>
+    
     </section>
   );
 };

@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
+
 const AppointmentForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -179,6 +180,7 @@ const AppointmentForm = () => {
           </motion.div>
         </div>
       </div>
+   
     </section>
   );
 };

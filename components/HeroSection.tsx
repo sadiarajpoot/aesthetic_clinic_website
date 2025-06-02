@@ -9,6 +9,7 @@ import newdoctor from "../public/new 2.jpg";
 import img1 from "../public/1.jpg";
 import img2 from "../public/2.jpg";
 import img3 from "../public/3.jpg";
+import WhatsAppFloat from "./Floating_icon";
 
 const HeroSection = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -134,6 +135,7 @@ const HeroSection = () => {
             priority
           />
         </motion.div>
+        <WhatsAppFloat/>
       </div>
     </>
   );

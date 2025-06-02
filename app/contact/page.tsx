@@ -1,5 +1,6 @@
 "use client";
 
+import WhatsAppFloat from "@/components/Floating_icon";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { useState, ChangeEvent } from "react";
@@ -166,6 +167,7 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+      <WhatsAppFloat/>
       <div className="mt-[20px]">
       <Footer/>
       </div>

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { FaFacebook, FaYoutube, FaTwitter, FaInstagram } from "react-icons/fa";
 
+
 const FAQSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
@@ -121,6 +122,7 @@ const FAQSection = () => {
         </div>
 
       </div>
+     
     </section>
   );
 };

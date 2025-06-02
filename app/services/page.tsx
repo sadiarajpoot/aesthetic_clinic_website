@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import WhatsAppFloat from '@/components/Floating_icon';
 
 export default function Services() {
   const [formData, setFormData] = useState({
@@ -129,6 +130,7 @@ export default function Services() {
           <p className="text-gray-600 text-sm">How can I help you?</p>
         </div>
       </div>
+      <WhatsAppFloat/>
     </div>
   );
 }
