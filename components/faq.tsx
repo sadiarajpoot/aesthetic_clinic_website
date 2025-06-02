@@ -44,7 +44,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-white to-pink-50">
+    <section className="py-20 px-4 bg-gradient-to-b from-white to-pink-50 fonts">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <motion.div
@@ -54,10 +54,10 @@ const FAQSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Aesthetic Clinic <span className="text-rose-600">FAQs</span>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 fonts">
+            Aesthetic Clinic <span className="text-rose-600 norican-regular font-bold">FAQs</span>
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 fonts">
             Discover everything you need to know about our aesthetic services, from procedures and safety to results and aftercare.
           </p>
         </motion.div>

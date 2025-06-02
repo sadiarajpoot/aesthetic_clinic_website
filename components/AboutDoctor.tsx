@@ -34,7 +34,7 @@ const AboutDoctor = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-20 bg-gradient-to-b from-white to-gray-50 fonts">
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Doctor Image */}
@@ -58,7 +58,7 @@ const AboutDoctor = () => {
                 className="w-full h-auto"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-6 flex flex-col justify-end">
+              <div className="fonts absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-6 flex flex-col justify-end">
                 <motion.h3 
                   initial={{ y: 20 }}
                   animate={{ y: 0 }}
@@ -144,7 +144,7 @@ const AboutDoctor = () => {
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
                     About <span className="text-rose-500">Dr. Raheel Memon</span>
                   </h2>
-                  <p className="text-lg text-gray-600 mb-6">
+                  <p className="text-lg text-gray-600 mb-6 fonts">
                     With over 15 years of experience in aesthetic medicine, Dr. Memon combines his 
                     artistic vision with surgical precision to deliver natural, harmonious results 
                     that enhance your unique beauty.
@@ -153,7 +153,7 @@ const AboutDoctor = () => {
               )}
 
               {activeTab === 'philosophy' && (
-                <p className="text-lg text-gray-600 mb-6">
+                <p className="text-lg text-gray-600 mb-6 fonts">
                   Dr. Memon believes in a patient-centered approach where less is more. His philosophy 
                   focuses on enhancing natural features rather than creating artificial looks, ensuring 
                   results that age gracefully with you.
@@ -161,7 +161,7 @@ const AboutDoctor = () => {
               )}
 
               {activeTab === 'approach' && (
-                <p className="text-lg text-gray-600 mb-6">
+                <p className="text-lg text-gray-600 mb-6 fonts">
                   Using a combination of advanced techniques and an artistic eye, Dr. Memon customizes 
                   each treatment plan to the individual. His approach emphasizes safety, precision, 
                   and achieving balanced, natural-looking outcomes.
@@ -177,8 +177,8 @@ const AboutDoctor = () => {
               >
                 <span className="text-rose-500 mr-3 mt-1">✓</span>
                 <div>
-                  <h4 className="font-semibold text-gray-800">Harvard Medical School Graduate</h4>
-                  <p className="text-gray-600">Specialized in Dermatology & Aesthetic Medicine</p>
+                  <h4 className="font-semibold text-gray-800 fonts">Harvard Medical School Graduate</h4>
+                  <p className="text-gray-600 fonts">Specialized in Dermatology & Aesthetic Medicine</p>
                 </div>
               </motion.li>
               <motion.li 
@@ -187,8 +187,8 @@ const AboutDoctor = () => {
               >
                 <span className="text-rose-500 mr-3 mt-1">✓</span>
                 <div>
-                  <h4 className="font-semibold text-gray-800">Board Certified in Dermatology</h4>
-                  <p className="text-gray-600">Fellowship trained in Cosmetic Procedures</p>
+                  <h4 className="font-semibold text-gray-800 fonts">Board Certified in Dermatology</h4>
+                  <p className="text-gray-600 fonts">Fellowship trained in Cosmetic Procedures</p>
                 </div>
               </motion.li>
               <motion.li 
@@ -197,8 +197,8 @@ const AboutDoctor = () => {
               >
                 <span className="text-rose-500 mr-3 mt-1">✓</span>
                 <div>
-                  <h4 className="font-semibold text-gray-800">International Trainer</h4>
-                  <p className="text-gray-600">For leading aesthetic brands and techniques</p>
+                  <h4 className="font-semibold text-gray-800 fonts">International Trainer</h4>
+                  <p className="text-gray-600 fonts">For leading aesthetic brands and techniques</p>
                 </div>
               </motion.li>
             </ul>
@@ -213,7 +213,7 @@ const AboutDoctor = () => {
               whileTap={{ scale: 0.95 }}
               onHoverStart={() => setIsHovered(true)}
               onHoverEnd={() => setIsHovered(false)}
-              className="bg-rose-600 text-white px-8 py-3 rounded-full font-medium flex items-center gap-2"
+              className=" fonts bg-rose-600 text-white px-8 py-3 rounded-full font-medium flex items-center gap-2"
             >
               View Full Credentials
               <motion.span

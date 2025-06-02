@@ -1,117 +1,122 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+
+import botoxImage from "../public/Botox & Fillers.avif";
+import laserImage from "../public/Laser Treatments.avif";
+import threadImage from "../public/Thread Lifts.webp";
+import skinImage from "../public/Skin Boosters.webp";
+
+const treatments = [
+  {
+    title: "Botox & Fillers",
+    description:
+      "Precision injections for wrinkle reduction and facial enhancement.",
+    image: botoxImage,
+    color: "from-purple-200 via-purple-100 to-white",
+    link: "/services#botox-fillers",
+  },
+  {
+    title: "Laser Treatments",
+    description:
+      "Advanced laser tech for glowing, youthful skin and pigmentation removal.",
+    image: laserImage,
+    color: "from-blue-200 via-blue-100 to-white",
+    link: "/services#laser-treatments",
+  },
+  {
+    title: "Thread Lifts",
+    description:
+      "Non-surgical facelift using bio-stimulating threads for instant lift.",
+    image: threadImage,
+    color: "from-pink-200 via-pink-100 to-white",
+    link: "/services#thread-lifts",
+  },
+  {
+    title: "Skin Boosters",
+    description:
+      "Deep hydration therapy to revive dull skin from within naturally.",
+    image: skinImage,
+    color: "from-teal-200 via-teal-100 to-white",
+    link: "/services#skin-boosters",
+  },
+];
 
 const TreatmentBoxes = () => {
-  const treatments = [
-    {
-      title: "Botox & Fillers",
-      description: "Precision injections for wrinkle reduction and natural-looking facial enhancement.",
-      cta: "Explore",
-      logo: "/icons/botox.svg",
-      color: "bg-purple-100"
-    },
-    {
-      title: "Laser Treatments",
-      description: "Advanced laser technology for skin rejuvenation and pigmentation correction.",
-      cta: "Explore",
-      logo: "/icons/laser.svg",
-      color: "bg-blue-100"
-    },
-    {
-      title: "Thread Lifts",
-      description: "Non-surgical facelift with immediate lifting effect using bio-stimulating threads.",
-      cta: "Explore",
-      logo: "/icons/threads.svg",
-      color: "bg-pink-100"
-    },
-    {
-      title: "Skin Boosters",
-      description: "Deep hydration treatments for glowing, youthful skin from within.",
-      cta: "Explore",
-      logo: "/icons/skin.svg",
-      color: "bg-teal-100"
-    }
-  ];
-
   return (
-    <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12"
-        >
-          Our Signature Treatments
-        </motion.h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {treatments.map((treatment, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ 
-                y: -10,
-                scale: 1.02,
-                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)"
-              }}
-              className={`${treatment.color} rounded-xl shadow-md overflow-hidden transition-all duration-300 group hover:shadow-lg`}
-            >
-              <div className="p-6 h-full flex flex-col">
-                {/* Logo with floating animation */}
-                <motion.div
-                  whileHover={{ 
-                    rotate: [0, -10, 10, 0],
-                    transition: { duration: 0.7 }
-                  }}
-                  className="mb-5 w-16 h-16 relative self-center"
-                >
-                  <Image
-                    src={treatment.logo}
-                    alt={treatment.title}
-                    fill
-                    className="object-contain"
-                  />
-                </motion.div>
+    <div className="py-20 px-4 sm:px-8 lg:px-16 bg-gradient-to-b from-white to-gray-50">
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-4xl font-extrabold text-center text-gray-800 mb-16"
+      >
+        Our <span className="text-rose-600 norican-regular">Signature</span>{" "}
+        Treatments
+      </motion.h2>
 
-                <h3 className="text-xl font-bold text-gray-800 mb-3 text-center group-hover:text-indigo-600 transition-colors">
-                  {treatment.title}
-                </h3>
-                
-                <p className="text-gray-600 mb-6 flex-grow text-center">
-                  {treatment.description}
-                </p>
-                
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {treatments.map((treatment, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+            viewport={{ once: true }}
+            whileHover={{
+              scale: 1.04,
+              transition: { type: "spring", stiffness: 200 },
+            }}
+            className={`bg-gradient-to-br ${treatment.color} rounded-2xl shadow-lg overflow-hidden transition-all duration-300 flex flex-col`}
+          >
+            <Link href={treatment.link}>
+              <div className="relative h-48 w-full overflow-hidden">
+                <Image
+                  src={treatment.image}
+                  alt={treatment.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+            </Link>
+
+            <div className="p-6 flex flex-col h-full">
+              <h3 className="text-xl font-bold text-gray-800 mb-2">
+                {treatment.title}
+              </h3>
+              <p className="text-gray-600 mb-6 text-sm leading-relaxed">
+                {treatment.description}
+              </p>
+
+              <Link href={treatment.link}>
                 <motion.button
-                  whileHover={{ 
-                    x: 5,
-                    backgroundColor: "#4f46e5",
-                    color: "white"
+                  whileHover={{
+                    x: 6,
+                    backgroundColor: "#e11d48",
+                    color: "white",
                   }}
                   whileTap={{ scale: 0.95 }}
-                  className="mt-auto w-fit mx-auto px-5 py-2 rounded-full border border-indigo-600 text-indigo-600 font-medium flex items-center gap-1 transition-colors"
+                  className="mt-auto w-fit px-5 py-2 rounded-full bg-white border border-rose-500 text-rose-600 font-medium flex items-center gap-1 transition-colors shadow hover:shadow-md"
                 >
-                  {treatment.cta}
+                  Explore
                   <motion.span
                     initial={{ x: 0 }}
-                    whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 500 }}
+                    whileHover={{ x: 4 }}
+                    transition={{ type: "spring", stiffness: 300 }}
                   >
                     →
                   </motion.span>
                 </motion.button>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+              </Link>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </div>
   );
 };
 
 export default TreatmentBoxes;
+

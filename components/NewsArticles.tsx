@@ -52,7 +52,7 @@ const NewsArticles = () => {
     : articles.filter(article => article.category.includes(selectedCategory));
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-white to-blue-50">
+    <section className="py-20 px-4 bg-gradient-to-b from-white to-blue-50 fonts">
       <div className="max-w-7xl mx-auto">
         {/* Header with Animation */}
         <motion.div
@@ -66,15 +66,15 @@ const NewsArticles = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+            className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 fonts"
           >
-            News & <span className="text-indigo-600">Articles</span>
+            News & <span className="norican-regular text-rose-600 norican-regular font-bold">Articles</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="text-lg text-gray-600 max-w-2xl mx-auto"
+            className="text-lg text-gray-600 max-w-2xl mx-auto fonts"
           >
             Insights about premium aesthetic treatments using FDA-approved products and cutting-edge techniques.
           </motion.p>
@@ -83,7 +83,7 @@ const NewsArticles = () => {
         
 
         {/* Articles Grid with Animated Presence */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 fonts">
           <AnimatePresence>
             {filteredArticles.map((article) => (
               <motion.article
@@ -104,12 +104,12 @@ const NewsArticles = () => {
                 }}
                 className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all"
               >
-                <motion.div className="relative h-60 overflow-hidden">
+                <motion.div className="fonts relative h-60 overflow-hidden hover:text-rose-600 ">
                   <Image
                     src={article.image}
                     alt={article.title}
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-500"
+                    className="object-cover hover:scale-105 transition-transform duration-500 hover:text-rose-600"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   <motion.div 
@@ -168,7 +168,7 @@ const NewsArticles = () => {
               color: "white"
             }}
             whileTap={{ scale: 0.95 }}
-            className="border-2 border-indigo-600 text-indigo-600 px-8 py-3 rounded-lg font-medium transition-colors"
+            className="border-2 border-indigo-600 text-indigo-600 px-8 py-3 rounded-lg font-bold transition-colors"
           >
             View All Articles
           </motion.button>

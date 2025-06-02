@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Norican&display=swap');
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -26,8 +28,31 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.fonts {
+  font-family: 'Poppins', sans-serif; /* or your preferred font */
+}
+
+.norican-regular {
+  font-family: 'Norican', cursive;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+

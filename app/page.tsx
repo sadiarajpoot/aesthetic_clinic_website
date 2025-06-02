@@ -12,6 +12,7 @@ import NewsArticles from '@/components/NewsArticles';
 import Testimonials_2 from '@/components/Testimonials2';
 import FAQSection from '@/components/faq';
 import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
 
 export default function Home() {
   return (
@@ -25,7 +26,8 @@ export default function Home() {
         <title>Elite Aesthetics | Premium Cosmetic Treatments</title>
         <meta name="description" content="Professional aesthetic treatments by board-certified specialists" />
       {/* </Head> */}
-
+   
+      <Navbar/>
       <HeroSection />
       <TreatmentCards />
       <NewPatientsWelcome />

@@ -26,7 +26,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white fonts">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0 }}
@@ -35,7 +35,7 @@ const Services = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Signature Treatments</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 fonts">Our <span className="norican-regular text-rose-600 norican-regular font-bold">Signature</span> Treatments</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Cutting-edge aesthetic procedures performed by experts
           </p>

@@ -15,7 +15,7 @@ const NewPatientsWelcome = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex items-center">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex items-center fonts">
       <div className="container mx-auto px-6 py-16">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Text Content */}
@@ -25,19 +25,19 @@ const NewPatientsWelcome = () => {
             transition={{ duration: 0.8 }}
             className="lg:w-1/2"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
-              We're Welcoming New Patients And Can't Wait to Meet You
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight fonts">
+              We&apos;re <span className="norican-regular text-rose-600 norican-regular font-bold">Welcoming New Patients</span> And Can&apos;t Wait to Meet You
             </h1>
             
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-lg text-gray-600 mb-8"
+              className="text-lg text-gray-600 mb-8 fonts"
             >
               We utilize only premium, FDA-approved treatments and the latest techniques 
               to ensure our patients receive the best aesthetic care possible. Rest assured, 
-              you're in good hands—book your appointment with confidence!
+              you&apos;re in good hands—book your appointment with confidence!
             </motion.p>
 
             {/* Phone Form */}
@@ -49,8 +49,8 @@ const NewPatientsWelcome = () => {
                 onSubmit={handleSubmit}
                 className="max-w-md"
               >
-                <div className="mb-4">
-                  <label htmlFor="phone" className="block text-gray-700 mb-2">
+                <div className="mb-4 fonts">
+                  <label htmlFor="phone" className="block text-gray-800 mb-2">
                     Submit phone number to schedule a consultation
                   </label>
                   <input
@@ -59,7 +59,7 @@ const NewPatientsWelcome = () => {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="Enter your phone number"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    className=" fonts w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                     required
                   />
                 </div>
@@ -67,7 +67,7 @@ const NewPatientsWelcome = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   type="submit"
-                  className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium shadow-md hover:bg-indigo-700 transition-colors"
+                  className="fonts bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium shadow-md hover:bg-indigo-700 transition-colors"
                 >
                   Schedule My Consultation
                 </motion.button>
@@ -78,7 +78,7 @@ const NewPatientsWelcome = () => {
                 animate={{ opacity: 1 }}
                 className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded max-w-md"
               >
-                <p>Thank you! We'll contact you shortly to schedule your appointment.</p>
+                <p className="fonts">Thank you! We&apos;ll contact you shortly to schedule your appointment.</p>
               </motion.div>
             )}
           </motion.div>
@@ -108,7 +108,7 @@ const NewPatientsWelcome = () => {
                 className="absolute top-6 right-6 bg-white px-4 py-2 rounded-full shadow-md flex items-center"
               >
                 <span className="w-3 h-3 bg-green-500 rounded-full mr-2 animate-pulse"></span>
-                <span className="font-medium">Now Accepting New Patients</span>
+                <span className="font-medium fonts">Now Accepting New Patients</span>
               </motion.div>
             </div>
           </motion.div>

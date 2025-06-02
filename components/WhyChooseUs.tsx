@@ -15,7 +15,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-blue-50 flex items-center py-16">
+    <div className="min-h-screen bg-gradient-to-b from-white to-blue-50 flex items-center py-16 fonts">
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Text Content */}
@@ -25,18 +25,18 @@ const WhyChooseUs = () => {
             transition={{ duration: 0.8 }}
             className="lg:w-1/2"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-8 leading-tight">
-              Why Choose <span className="text-indigo-600">Elite Aesthetics</span> For Your Transformation?
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-8 leading-tight fonts">
+              Why Choose  <span className="norican-regular text-rose-600 norican-regular font-bold">Elite Aesthetics</span> For Your Transformation?
             </h1>
             
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="text-lg text-gray-600 mb-10"
+              className="text-lg text-gray-600 mb-10 fonts"
             >
               We use only premium, FDA-approved treatments and cutting-edge techniques to provide 
-              natural-looking aesthetic enhancements you'll love.
+              natural-looking aesthetic enhancements you&apos;ll love.
             </motion.p>
 
             {/* Features List */}
@@ -49,7 +49,7 @@ const WhyChooseUs = () => {
                   transition={{ delay: 0.4 + index * 0.1 }}
                   className="flex items-start"
                 >
-                  <CheckCircle className="w-6 h-6 text-indigo-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-indigo-500 mr-3 mt-0.5 flex-shrink-0 fonts" />
                   <span className="text-lg text-gray-700">{feature}</span>
                 </motion.li>
               ))}
@@ -64,7 +64,7 @@ const WhyChooseUs = () => {
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="bg-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-semibold shadow-lg hover:bg-indigo-700 transition-colors"
+                className="fonts bg-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-semibold shadow-lg hover:bg-indigo-700 transition-colors"
               >
                 Book Your Consultation
               </motion.button>
@@ -78,7 +78,7 @@ const WhyChooseUs = () => {
             transition={{ duration: 0.8 }}
             className="lg:w-1/2 relative"
           >
-            <div className="relative rounded-xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-xl overflow-hidden shadow-2xl fonts">
               <Image 
                 src={treatment} // Replace with your image
                 alt="Modern aesthetic treatment room"
@@ -98,7 +98,7 @@ const WhyChooseUs = () => {
                     </svg>
                   ))}
                 </div>
-                <p className="text-gray-800 font-medium mb-2">"Life-changing results! The team made me feel completely comfortable."</p>
+                <p className="text-gray-800 font-medium mb-2 fonts">&apos;Life-changing results! The team made me feel completely comfortable.&apos;</p>
                 <p className="text-gray-600">- Sarah K.</p>
               </motion.div>
             </div>

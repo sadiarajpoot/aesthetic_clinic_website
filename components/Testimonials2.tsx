@@ -43,7 +43,7 @@ const Testimonials_2 = () => {
   };
 
   return (
-    <section className="relative py-20 px-4 overflow-hidden">
+    <section className="relative py-20 px-4 overflow-hidden fonts">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -65,8 +65,8 @@ const Testimonials_2 = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            <span className="text-rose-300">HAPPY CLIENTS</span> <br />
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 fonts">
+           <span className="norican-regular text-rose-600 norican-regular font-bold"> HAPPY CLIENTS</span> <br />
             WITH HAPPY WORDS
           </h1>
           <motion.p
@@ -74,14 +74,14 @@ const Testimonials_2 = () => {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
             viewport={{ once: true }}
-            className="text-lg text-rose-100"
+            className="text-lg text-rose-100 fonts"
           >
             View all our happy clients feedback
           </motion.p>
         </motion.div>
 
         {/* Testimonial Carousel */}
-        <div className="relative h-[400px] mb-12">
+        <div className="relative h-[400px] mb-12 fonts">
           <AnimatePresence custom={direction}>
             <motion.div
               key={currentIndex}
@@ -92,7 +92,7 @@ const Testimonials_2 = () => {
               transition={{ duration: 0.5 }}
               className="absolute inset-0 flex items-center justify-center"
             >
-              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-lg max-w-2xl mx-auto">
+              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-lg max-w-2xl mx-auto fonts">
                 <div className="flex flex-col md:flex-row gap-8 items-center">
                
                   <div>
@@ -100,7 +100,7 @@ const Testimonials_2 = () => {
                       <FaQuoteLeft />
                     </div>
                     <p className="text-gray-700 mb-6 italic text-lg">
-                      "{testimonials[currentIndex].quote}"
+                      &quot;{testimonials[currentIndex].quote}&quot;
                     </p>
                     <div className="border-t border-gray-200 pt-4">
                       <h4 className="font-bold text-gray-800 text-xl">
@@ -119,20 +119,20 @@ const Testimonials_2 = () => {
           {/* Navigation Arrows */}
           <button 
             onClick={prevTestimonial}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-md z-20 ml-4"
+            className="fonts absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-md z-20 ml-4"
           >
             <FaArrowLeft className="text-rose-600 text-xl" />
           </button>
           <button 
             onClick={nextTestimonial}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-md z-20 mr-4"
+            className="fonts absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-md z-20 mr-4"
           >
             <FaArrowRight className="text-rose-600 text-xl" />
           </button>
         </div>
 
         {/* Dots Indicator */}
-        <div className="flex justify-center gap-2 mb-12">
+        <div className="flex justify-center gap-2 mb-12 fonts">
           {testimonials.map((_, index) => (
             <button
               key={index}
@@ -162,7 +162,7 @@ const Testimonials_2 = () => {
               color: "white"
             }}
             whileTap={{ scale: 0.95 }}
-            className="bg-rose-600 text-white px-8 py-3 rounded-lg font-medium flex items-center gap-2 mx-auto"
+            className="bg-rose-600 text-white px-8 py-3 rounded-lg font-bold flex items-center gap-2 mx-auto"
           >
             View All Testimonials
             <FaArrowRight />

@@ -9,7 +9,7 @@ const testimonials = [
     id: 1,
     name: "Emma Watson",
     role: "Actress",
-    content: "Dr. Johnson's subtle enhancements made me look refreshed without changing my features. Absolutely natural results!",
+    content: "Dr. Johnsons subtle enhancements made me look refreshed without changing my features. Absolutely natural results!",
     image: "/client1.jpg",
     rating: 5
   },
@@ -58,7 +58,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-gradient-to-b from-rose-50 to-rose-100">
+    <section className="py-20 bg-gradient-to-b from-rose-50 to-rose-100 fonts">
       <div className="container mx-auto px-6">
         {/* Header */}
         <motion.div
@@ -72,22 +72,22 @@ const Testimonials = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+            className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 fonts"
           >
-            Patient <span className="text-rose-600">Testimonials</span>
+            Patient <span className="norican-regular text-rose-600 norican-regular font-bold"> Testimonials</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="text-xl text-gray-600 max-w-2xl mx-auto"
+            className="text-xl text-gray-600 max-w-2xl mx-auto fonts"
           >
             Hear what our patients say about their experience
           </motion.p>
         </motion.div>
 
         {/* Desktop Grid View */}
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8 fonts">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.id}
@@ -104,7 +104,7 @@ const Testimonials = () => {
               <div className="text-rose-400 text-3xl mb-4">
                 <FaQuoteLeft />
               </div>
-              <p className="text-gray-600 italic mb-6">"{testimonial.content}"</p>
+              <p className="text-gray-600 italic mb-6">&quot;{testimonial.content}&quot;</p>
               
               <div className="flex items-center">
                 <div className="relative w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-rose-200">
@@ -130,7 +130,7 @@ const Testimonials = () => {
         </div>
 
         {/* Mobile Carousel */}
-        <div className="md:hidden relative h-[400px]">
+        <div className="md:hidden relative h-[400px] fonts">
           <AnimatePresence custom={direction}>
             <motion.div
               key={currentIndex}
@@ -145,7 +145,7 @@ const Testimonials = () => {
                 <div className="text-rose-400 text-3xl mb-4">
                   <FaQuoteLeft />
                 </div>
-                <p className="text-gray-600 italic mb-6 flex-grow">"{testimonials[currentIndex].content}"</p>
+                <p className="text-gray-600 italic mb-6 flex-grow">&quot;{testimonials[currentIndex].content}&quot;</p>
                 
                 <div className="flex items-center">
                   <div className="relative w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-rose-200">
@@ -173,7 +173,7 @@ const Testimonials = () => {
           {/* Navigation Arrows */}
           <button 
             onClick={prevTestimonial}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-md z-20 ml-2"
+            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-md z-20 ml-2 fonts"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-rose-600" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
