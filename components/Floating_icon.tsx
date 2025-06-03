@@ -4,7 +4,7 @@ import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const WhatsAppFloat = () => {
-  const whatsappNumber = '923001234567'; // Replace with your WhatsApp number without '+'
+  const whatsappNumber = '923133233733'; // Replace with your WhatsApp number without '+'
 
   return (
     <a
